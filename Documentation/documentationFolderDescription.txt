@@ -1,0 +1,2 @@
+Any documentation related to the demo, e.g. a requirements 
+document for the demo, or PDFs or images that show how to setup hardware. 

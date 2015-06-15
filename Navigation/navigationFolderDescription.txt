@@ -1,0 +1,18 @@
+Files needed to navigate the demo. For CDA, it might be a published MATLAB 
+file. For LTC or SPC, it might be a MATLAB file to run by   
+section or a MATLAB file that calls each file in the Task folder. 
+This template includes demoScript.m which is published and opened when you 
+open the project by projectStartup.m and openHTML.m.
+
+I have found other useful ways AEs navigate demos, including a Word 
+document saved as an html, or straight html code.
+
+Some AEs prefer using the Simulink Project shortcuts but have mentioned 
+additional documentation may be needed to assist new users of your       
+demo in this case.
+
+Craig Borghesani wrote a series of scripts that publishes a MATLAB file 
+without having to restrict yourself to the syntax requirements of the 
+publish command. Check out the file script2html.m, and related files, in 
+the Navigation\Script2html folder for more info. 
+

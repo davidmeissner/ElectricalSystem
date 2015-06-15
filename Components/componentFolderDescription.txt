@@ -1,0 +1,7 @@
+Files related to each component of the demo with one subfolder for each 
+component, e.g. one folder, called CAD, for all the CAD files for the demo,
+ or another folder, called Libraries, for all the +Libraries needed to 
+build your Simscape components for the demo. The folder structure within 
+the Component folder will vary widely. The intent is to make it easy for
+ someone new to the demo to pick it up quickly and reduce the amount of 
+time the owner spends fielding questions on his/her demo.

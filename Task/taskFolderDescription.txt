@@ -1,0 +1,3 @@
+Files related to each task to be accomplished during the demo, e.g. one 
+MATLAB file for each task or one folder containing the files needed to 
+perform that task.

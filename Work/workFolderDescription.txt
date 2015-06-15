@@ -1,0 +1,3 @@
+Temporary files that can be deleted between each demonstration. 
+Don't worry. Nowhere in the template are these files deleted, 
+but you could specify something like that in projectShutdown.m

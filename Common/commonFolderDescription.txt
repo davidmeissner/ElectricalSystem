@@ -1,0 +1,3 @@
+Files common to multiple demos, e.g. a DC Motor demo used in both 
+ballTracking and RobotArm or as included here a test script and data to 
+test connectivity to the REFPROP database.
