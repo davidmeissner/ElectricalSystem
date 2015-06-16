@@ -12,7 +12,7 @@
 %
 % * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
 % 
-%% Model Overview
+%% Aircraft Power Network
 %
 % * <matlab:open_system('Aircraft_Power_Network'); Open model>
 % * <matlab:sim('Aircraft_Power_Network'); Run model>
@@ -21,18 +21,16 @@
 % * <matlab:web('APN_Model_Report_SHORT1.html','-new'); Open report>
 % * Fully configurable reports, plots, FFT Analysis, THD
 %
-%% Model Based Design
+%% Physical Modeling
 % 
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint>
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
 %
-%% Requirements Traceability
+%% Modeling Electronics and Power Systems
 %
-% * <matlab:open_system('Aircraft_Power_Network'); Open model>
-% * Right click on TRU / Requirements Traceability / 1. "TRU Requirements"
-% * <matlab:uiopen('APN_System_Requirements'); Open requirements in Word>
-% * Highlight blocks in the model with requirements (Analysis / Requirements
-% tracability / Highlight Model
-%
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
+% * <matlab:simulink; Open Simulink Library Browser>
+% * <matlab:open_system('PS_Simulation_Modes'); Open PS_Simulation_Modes>
+% * <matlab:run('PS_Simulation_Modes_Test.m'); Run PS_Simulation_Modes_Test.m>
 % 
 %% Transformer Rectifier Unit
 %
@@ -40,6 +38,7 @@
 % * Transformer - Winding connection, Parameters
 % * Universal Bridge - Power Electronic Device Options
 % * Show help
+% * Change Block Choice to Multi-Domain and review DC loads
 %
 %% Logic and Controls
 %
@@ -50,6 +49,7 @@
 % * Stateflow chart
 % * Run
 % * After it disconnects, go into phasesync
+% * In measurements, review the scope Vab (and review the phase sync)
 %
 %% Voltage Regulator Example / Controls
 %
@@ -59,10 +59,16 @@
 % * PI controllers
 % * <matlab:acdcac_simscape; acdcac_simscape> SPS Simscape Components
 %
-%% SimElectronics vs SimPowerSystems
+%% Requirements Traceability
 %
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint>
-% * <matlab:simulink; Open Simulink Library Browser>
+% * <matlab:open_system('Aircraft_Power_Network'); Open model>
+% * Right click on TRU / Requirements Traceability / 1. "TRU Requirements"
+% * <matlab:winopen('APN_System_Requirements.docx'); Open requirements in Word>
+% * Highlight blocks in the model with requirements (Analysis / Requirements
+% tracability / Highlight Model
+% * Add a requirement for the generator (Highlight "Generator
+% Requirements", the right click on the generator block and select,
+% Requirements Traceability, Link to Selection in Word.)
 % 
 %% Other Potential Discussion
 %
@@ -72,4 +78,4 @@
 % * determine expected outputs for each new test case
 % * compare simulation with expected outputs
 %
-% Copyright 2014 The MathWorks, Inc.
+% Copyright 2014-2015 The MathWorks, Inc.

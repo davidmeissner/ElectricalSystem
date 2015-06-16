@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Aircraft Power Network and SimPowerSystems</title><meta name="generator" content="MATLAB 8.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-05"><meta name="DC.source" content="demoScript.m"><style type="text/css">
+      --><title>Electrical System</title><meta name="generator" content="MATLAB 8.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-15"><meta name="DC.source" content="demoScript.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -66,11 +66,11 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Aircraft Power Network and SimPowerSystems</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Key Messages of Aircraft Power Network</a></li><li><a href="#2">Stetup/Intro</a></li><li><a href="#3">Model Overview</a></li><li><a href="#4">Model Based Design</a></li><li><a href="#5">Requirements Traceability</a></li><li><a href="#6">Transformer Rectifier Unit</a></li><li><a href="#7">Logic and Controls</a></li><li><a href="#8">Voltage Regulator Example / Controls</a></li><li><a href="#9">SimElectronics vs SimPowerSystems</a></li><li><a href="#10">Other Potential Discussion</a></li></ul></div><h2>Key Messages of Aircraft Power Network<a name="1"></a></h2><div><ul><li>Model networks containing generators, AC loads, DC loads, and TRU</li><li>Refine requirements using abstract component models</li><li>Analyze power quality at various points in different flight cycles</li><li>Integrate requirements into your development process</li><li>Accelerate development by running simulations in parallel</li></ul></div><h2>Stetup/Intro<a name="2"></a></h2><div><ul><li>Add SPSWorkshop files to path</li><li><a href="matlab:startup_power_aircraft;">Run demo startup</a></li><li><a href="matlab:uiopen('SPS_CraneAerospace.pptx',1);">Open Powerpoint</a></li><li>Key Messages, User Stories, Model Intro slide</li></ul></div><h2>Model Overview<a name="3"></a></h2><div><ul><li><a href="matlab:open_system('Aircraft_Power_Network');">Open model</a></li><li><a href="matlab:sim('Aircraft_Power_Network');">Run model</a></li><li>Generator, AC Bus, TRU, DC Bus</li><li>Testing various flight cycles/ varying loading conditions</li><li><a href="matlab:web('APN_Model_Report_SHORT1.html','-new');">Open report</a></li><li>Fully configurable reports, plots, FFT Analysis, THD</li></ul></div><h2>Model Based Design<a name="4"></a></h2><div><ul><li><a href="matlab:uiopen('SPS_CraneAerospace.pptx',1);">Open Powerpoint</a></li></ul></div><h2>Requirements Traceability<a name="5"></a></h2><div><ul><li><a href="matlab:open_system('Aircraft_Power_Network');">Open model</a></li><li>Right click on TRU / Requirements Traceability / 1. "TRU Requirements"</li><li><a href="matlab:uiopen('APN_System_Requirements');">Open requirements in Word</a></li><li>Highlight blocks in the model with requirements (Analysis / Requirements tracability / Highlight Model</li></ul></div><h2>Transformer Rectifier Unit<a name="6"></a></h2><div><ul><li>Open Subsystem, talk about TRU, DC Loads</li><li>Transformer - Winding connection, Parameters</li><li>Universal Bridge - Power Electronic Device Options</li><li>Show help</li></ul></div><h2>Logic and Controls<a name="7"></a></h2><div><ul><li><a href="matlab:synchronizing_breaker;">Syncronizing Breaker</a></li><li>Top level overview</li><li>Open the controller, Mechanical Power Control, Field Voltage, PID</li><li>PID Tuner overview</li><li>Stateflow chart</li><li>Run</li><li>After it disconnects, go into phasesync</li></ul></div><h2>Voltage Regulator Example / Controls<a name="8"></a></h2><div><ul><li><a href="matlab:acdcac_specialized;">acdcac_specialized</a> SPS Specialized Technology</li><li>abs to dq0 transformation</li><li>PI controllers</li><li><a href="matlab:acdcac_simscape;">acdcac_simscape</a> SPS Simscape Components</li></ul></div><h2>SimElectronics vs SimPowerSystems<a name="9"></a></h2><div><ul><li><a href="matlab:uiopen('SPS_CraneAerospace.pptx',1);">Open Powerpoint</a></li><li><a href="matlab:simulink;">Open Simulink Library Browser</a></li></ul></div><h2>Other Potential Discussion<a name="10"></a></h2><div><ul><li>VnV, Certification, Code Generation</li><li>model coverage, Decision, Condition, MC/DC</li><li>generate test cases to ensure full coverage</li><li>determine expected outputs for each new test case</li><li>compare simulation with expected outputs</li></ul></div><p class="footer">Copyright 2014 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Electrical System</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Key Messages</a></li><li><a href="#2">Overview</a></li><li><a href="#3">Aircraft Power Network</a></li><li><a href="#4">Physical Modeling</a></li><li><a href="#5">Modeling Electronics and Power Systems</a></li><li><a href="#6">Transformer Rectifier Unit</a></li><li><a href="#7">Logic and Controls</a></li><li><a href="#8">Voltage Regulator Example / Controls</a></li><li><a href="#9">Requirements Traceability</a></li><li><a href="#10">Other Potential Discussion</a></li></ul></div><h2>Key Messages<a name="1"></a></h2><div><ul><li>Model networks containing generators, AC loads, DC loads, and TRU</li><li>Refine requirements using abstract component models</li><li>Analyze power quality at various points in different flight cycles</li><li>Integrate requirements into your development process</li><li>Accelerate development by running simulations in parallel</li></ul></div><h2>Overview<a name="2"></a></h2><div><ul><li><a href="matlab:winopen('electricalSystem.pptx');">Open PowerPoint</a></li></ul></div><h2>Aircraft Power Network<a name="3"></a></h2><div><ul><li><a href="matlab:open_system('Aircraft_Power_Network');">Open model</a></li><li><a href="matlab:sim('Aircraft_Power_Network');">Run model</a></li><li>Generator, AC Bus, TRU, DC Bus</li><li>Testing various flight cycles/ varying loading conditions</li><li><a href="matlab:web('APN_Model_Report_SHORT1.html','-new');">Open report</a></li><li>Fully configurable reports, plots, FFT Analysis, THD</li></ul></div><h2>Physical Modeling<a name="4"></a></h2><div><ul><li><a href="matlab:winopen('electricalSystem.pptx');">Open PowerPoint</a></li></ul></div><h2>Modeling Electronics and Power Systems<a name="5"></a></h2><div><ul><li><a href="matlab:winopen('electricalSystem.pptx');">Open PowerPoint</a></li><li><a href="matlab:simulink;">Open Simulink Library Browser</a></li><li><a href="matlab:open_system('PS_Simulation_Modes');">Open PS_Simulation_Modes</a></li><li><a href="matlab:run('PS_Simulation_Modes_Test.m');">Run PS_Simulation_Modes_Test.m</a></li></ul></div><h2>Transformer Rectifier Unit<a name="6"></a></h2><div><ul><li>Open Subsystem, talk about TRU, DC Loads</li><li>Transformer - Winding connection, Parameters</li><li>Universal Bridge - Power Electronic Device Options</li><li>Show help</li><li>Change Block Choice to Multi-Domain and review DC loads</li></ul></div><h2>Logic and Controls<a name="7"></a></h2><div><ul><li><a href="matlab:synchronizing_breaker;">Syncronizing Breaker</a></li><li>Top level overview</li><li>Open the controller, Mechanical Power Control, Field Voltage, PID</li><li>PID Tuner overview</li><li>Stateflow chart</li><li>Run</li><li>After it disconnects, go into phasesync</li><li>In measurements, review the scope Vab (and review the phase sync)</li></ul></div><h2>Voltage Regulator Example / Controls<a name="8"></a></h2><div><ul><li><a href="matlab:acdcac_specialized;">acdcac_specialized</a> SPS Specialized Technology</li><li>abs to dq0 transformation</li><li>PI controllers</li><li><a href="matlab:acdcac_simscape;">acdcac_simscape</a> SPS Simscape Components</li></ul></div><h2>Requirements Traceability<a name="9"></a></h2><div><ul><li><a href="matlab:open_system('Aircraft_Power_Network');">Open model</a></li><li>Right click on TRU / Requirements Traceability / 1. "TRU Requirements"</li><li><a href="matlab:winopen('APN_System_Requirements.docx');">Open requirements in Word</a></li><li>Highlight blocks in the model with requirements (Analysis / Requirements tracability / Highlight Model</li><li>Add a requirement for the generator (Highlight "Generator Requirements", the right click on the generator block and select, Requirements Traceability, Link to Selection in Word.)</li></ul></div><h2>Other Potential Discussion<a name="10"></a></h2><div><ul><li>VnV, Certification, Code Generation</li><li>model coverage, Decision, Condition, MC/DC</li><li>generate test cases to ensure full coverage</li><li>determine expected outputs for each new test case</li><li>compare simulation with expected outputs</li></ul></div><p class="footer">Copyright 2014-2015 The MathWorks, Inc.<br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2015a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Aircraft Power Network and SimPowerSystems
+%% Electrical System
 % 
-%% Key Messages of Aircraft Power Network
+%% Key Messages
 %
 % * Model networks containing generators, AC loads, DC loads, and TRU
 % * Refine requirements using abstract component models
@@ -78,14 +78,11 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * Integrate requirements into your development process
 % * Accelerate development by running simulations in parallel
 %
-%% Stetup/Intro
+%% Overview
 %
-% * Add SPSWorkshop files to path
-% * <matlab:startup_power_aircraft; Run demo startup>
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint> 
-% * Key Messages, User Stories, Model Intro slide
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
 % 
-%% Model Overview
+%% Aircraft Power Network
 %
 % * <matlab:open_system('Aircraft_Power_Network'); Open model>
 % * <matlab:sim('Aircraft_Power_Network'); Run model>
@@ -94,18 +91,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * <matlab:web('APN_Model_Report_SHORT1.html','-new'); Open report>
 % * Fully configurable reports, plots, FFT Analysis, THD
 %
-%% Model Based Design
+%% Physical Modeling
 % 
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint>
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
 %
-%% Requirements Traceability
+%% Modeling Electronics and Power Systems
 %
-% * <matlab:open_system('Aircraft_Power_Network'); Open model>
-% * Right click on TRU / Requirements Traceability / 1. "TRU Requirements"
-% * <matlab:uiopen('APN_System_Requirements'); Open requirements in Word>
-% * Highlight blocks in the model with requirements (Analysis / Requirements
-% tracability / Highlight Model
-%
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
+% * <matlab:simulink; Open Simulink Library Browser>
+% * <matlab:open_system('PS_Simulation_Modes'); Open PS_Simulation_Modes>
+% * <matlab:run('PS_Simulation_Modes_Test.m'); Run PS_Simulation_Modes_Test.m>
 % 
 %% Transformer Rectifier Unit
 %
@@ -113,6 +108,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * Transformer - Winding connection, Parameters
 % * Universal Bridge - Power Electronic Device Options
 % * Show help
+% * Change Block Choice to Multi-Domain and review DC loads
 %
 %% Logic and Controls
 %
@@ -123,6 +119,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * Stateflow chart
 % * Run
 % * After it disconnects, go into phasesync
+% * In measurements, review the scope Vab (and review the phase sync)
 %
 %% Voltage Regulator Example / Controls
 %
@@ -132,10 +129,16 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * PI controllers
 % * <matlab:acdcac_simscape; acdcac_simscape> SPS Simscape Components
 %
-%% SimElectronics vs SimPowerSystems
+%% Requirements Traceability
 %
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint>
-% * <matlab:simulink; Open Simulink Library Browser>
+% * <matlab:open_system('Aircraft_Power_Network'); Open model>
+% * Right click on TRU / Requirements Traceability / 1. "TRU Requirements"
+% * <matlab:winopen('APN_System_Requirements.docx'); Open requirements in Word>
+% * Highlight blocks in the model with requirements (Analysis / Requirements
+% tracability / Highlight Model
+% * Add a requirement for the generator (Highlight "Generator
+% Requirements", the right click on the generator block and select,
+% Requirements Traceability, Link to Selection in Word.)
 % 
 %% Other Potential Discussion
 %
@@ -145,6 +148,6 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % * determine expected outputs for each new test case
 % * compare simulation with expected outputs
 %
-% Copyright 2014 The MathWorks, Inc.
+% Copyright 2014-2015 The MathWorks, Inc.
 ##### SOURCE END #####
 --></body></html>
