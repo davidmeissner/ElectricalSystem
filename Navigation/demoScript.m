@@ -1,6 +1,6 @@
-%% Aircraft Power Network and SimPowerSystems
+%% Electrical System
 % 
-%% Key Messages of Aircraft Power Network
+%% Key Messages
 %
 % * Model networks containing generators, AC loads, DC loads, and TRU
 % * Refine requirements using abstract component models
@@ -8,12 +8,9 @@
 % * Integrate requirements into your development process
 % * Accelerate development by running simulations in parallel
 %
-%% Stetup/Intro
+%% Overview
 %
-% * Add SPSWorkshop files to path
-% * <matlab:startup_power_aircraft; Run demo startup>
-% * <matlab:uiopen('SPS_CraneAerospace.pptx',1); Open Powerpoint> 
-% * Key Messages, User Stories, Model Intro slide
+% * <matlab:winopen('electricalSystem.pptx'); Open PowerPoint> 
 % 
 %% Model Overview
 %
