@@ -6,7 +6,7 @@ open_system('sps_powersupply');
 sim('sps_powersupply');
 
 %% Compare system level results
-figure(1)
+figure
 plot(Vload_se.time,Vload_se.signals(1).values,...
     'Color',[105/255,120/255,25/255],'LineWidth', 4);
 hold on
@@ -23,7 +23,7 @@ legend({'SimElectronics','SimPowerSystems'},...
 hold off
 
 %% Compare switching device level responses
-figure(2)
+figure
 subplot(311)
 set(gcf,'Position',[10 40 500 640]);
 plot(simoutSE.getElement(4).Values.Time,simoutSE.getElement(4).Values.Data,...
@@ -42,7 +42,7 @@ legend({'M1', 'M2'},'Location','Best','FontWeight','Bold',...
     'FontSize',8);
 hold off
 
-figure(3)
+figure
 subplot(311)
 set(gcf,'Position',[525 40 500 640]);
 plot(simoutSPS.getElement(4).Values.Time,simoutSPS.getElement(4).Values.Data,...
