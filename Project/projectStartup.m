@@ -10,7 +10,6 @@ end
 
 %% Generic Tasks
 %  Open Demo Script to Navigate the Example
-% open('APN_Demo_Script.html') % Steve Miller's
 open('demoScript.html')
 
 %% Custom Tasks for this demo
@@ -46,9 +45,6 @@ cd(rootFolder);
 if(exist('rmi')==2)
     rmi setup
 end
-
-% LOAD PARAMETERS
-% APN_Model_PARAM loads via shortcut
 
 % OPEN MODEL
 Aircraft_Power_Network

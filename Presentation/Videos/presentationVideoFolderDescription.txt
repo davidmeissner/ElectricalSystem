@@ -1,6 +1,0 @@
-Videos in this folder could be a video of the hardware in action, in case it isn't 
-working when you need it to or it could be a video that presents the demo 
-to a customer in a short time span as a great demo that can be used as a 
-quick demonstration of concept answering a question at the end visit, etc.
-One of these videos could eventually become a webinar online, but the 
-concept is that videos in this folder are meant to be customer facing.

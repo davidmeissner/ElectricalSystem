@@ -1,1 +1,0 @@
-winopen('termsAndAcronyms.xlsx')

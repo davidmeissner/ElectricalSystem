@@ -1,3 +1,0 @@
-Files related to the management of the project. This template contains 
-startup and shutdown scripts and functions related to the management of the
-MATLAB path.
